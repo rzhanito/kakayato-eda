@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -8,27 +9,11 @@ body {
   max-width: 1194px;
   margin: auto;
 }
-
-.header {
-  display: flex;
-  align-items: center;
-  padding: 10px 0px;
-}
-
-.auth {
-  margin: 0 0 0 auto;
-}
-
-.shopping-cart {
-  position: relative;
-  width: 49px;
-  height: 49px;
-  border-radius: 50%;
-  background: #f66a15;
+header {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 30px;
+  padding: 10px 0px;
 }
 
 .search-form {
@@ -36,51 +21,224 @@ body {
   background: rgba(238, 238, 238, 0.71);
   border-radius: 10px;
   display: flex;
+  position: relative;
   max-width: 620px;
   flex-grow: 1;
-  position: relative;
 }
 
 .search-input {
-  background-color: transparent;
   border: none;
+  background: transparent;
   width: 100%;
   padding: 13px 20px;
 }
 
 .search-btn {
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  padding-right: 18px;
   padding-left: 18px;
+  padding-right: 18px;
+  height: 100%;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+  position: absolute;
   cursor: pointer;
+  border: none;
 }
 
 .login {
+  padding: 16px 30px;
   background: #ebebeb;
   border-radius: 50px;
-  padding: 16px 30px;
-  display: block;
   text-decoration: none;
-  font-size: 14px;
-  line-height: 16px;
   color: #000;
-  text-decoration: none;
 }
 
-.shopping-conter {
+.auth {
+  margin: 0px 0px 0px auto;
+}
+.shopping-cart {
+  position: relative;
+  border-radius: 50%;
+  background: #f66a15;
+  display: flex;
+  width: 49px;
+  height: 49px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.shopping-counter {
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  padding: 5px;
   background: #ffaf19;
+  border-radius: 50%;
+  display: block;
   line-height: 9px;
   font-size: 8px;
   color: #000;
-  display: block;
-  padding: 5px;
-  border-radius: 50%;
+}
+
+.slider {
+}
+
+.slide-light {
+  background: grey;
+  color: #fff;
+}
+
+.slide {
+  position: relative;
+  border-radius: 25px;
+  min-height: 400px;
+  padding: 100px;
+  overflow: hidden;
+}
+.slide-content {
+  max-width: 400px;
+  position: relative;
+}
+.slider-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 51px;
+}
+.slider-text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 30px;
+}
+.button-primary {
+  background: #f47322;
+  color: #fff;
+}
+
+.button {
+  border-radius: 25px;
+  display: inline-block;
+  padding: 12px 50px;
+  text-decoration: none;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 23px;
+}
+
+.slide-summer {
+  background: url(../img/summer.png) no-repeat;
+  background-size: cover;
+}
+.slide:before {
+  content: "";
   position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.43) 40.45%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+/* slider end */
+.promo {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+}
+.promo.card {
+}
+.card {
+  flex: 1 1 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 32px;
+  z-index: 0;
+  max-width: 570px;
+  min-height: 380px;
+}
+.card:before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
+}
+.card-text-light {
+  color: #fff;
+}
+.card-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.card-title {
+  font-weight: 500;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 21px;
+  line-height: 23px;
+}
+.card-description {
+  max-width: 168px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+}
+.card-price {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 23px;
+  margin-bottom: 8px;
+  display: block;
+}
+.card-delivery {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  margin-bottom: 25px;
+}
+.button {
+  border-radius: 50px;
+  padding: 13px 52px;
+  color: #5f5f61;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  background-color: #fff;
+}
+
+.card-sweet-basket {
+  margin-right: 34px;
+}
+
+.card-minimum-effort {
+  padding-left: -25px;
 }
