@@ -9,8 +9,8 @@ body {
   font-weight: 500;
 }
 .container {
-  max-width: 1194px;
-  margin: 0px auto;
+  max-width: 1200px;
+  margin: auto;
 }
 header {
   display: flex;
@@ -191,7 +191,7 @@ header {
   overflow: hidden;
   padding: 32px;
   z-index: 0;
-  width: 570px;
+  max-width: 560px;
   min-height: 380px;
   flex: 50%;
   margin: 0 0 32px 0;
@@ -245,7 +245,6 @@ header {
   border-radius: 50px;
   padding: 13px 52px;
   color: #5f5f61;
-
   background-color: #fff;
   text-decoration: none;
 }
@@ -485,8 +484,6 @@ header {
 .footer-logo {
   margin-right: 50px;
 }
-.footer-links {
-}
 .footer-link {
   text-decoration: none;
   margin-right: 50px;
@@ -556,6 +553,9 @@ header {
   .promo {
     flex-wrap: wrap;
   }
+  .card {
+    width: 560px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -582,5 +582,11 @@ header {
   }
   .slide {
     padding: 60px;
+  }
+}
+
+@media (max-width: 376px) {
+  body {
+    display: none;
   }
 }
