@@ -4,6 +4,9 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  line-height: 23px;
+  font-size: 16px;
+  font-weight: 500;
 }
 .container {
   max-width: 1194px;
@@ -83,9 +86,6 @@ header {
   color: #000;
 }
 
-.slider {
-}
-
 .slide-light {
   background: grey;
   color: #fff;
@@ -111,13 +111,12 @@ header {
 }
 .slider-text {
   font-weight: 700;
-  font-size: 16px;
-  line-height: 23px;
+
   margin-bottom: 30px;
 }
 .button-primary {
-  background: #f47322;
   color: #fff;
+  background: #f47322;
 }
 
 .button {
@@ -127,8 +126,6 @@ header {
   text-decoration: none;
   font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 23px;
 }
 
 .slide-summer {
@@ -152,15 +149,14 @@ header {
 }
 
 /* slider end */
+
+/* promo with slides begin */
 .promo {
   padding-top: 50px;
   padding-bottom: 50px;
   display: flex;
 }
-.promo.card {
-}
 .card {
-  flex: 1 1 auto;
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -171,6 +167,7 @@ header {
   z-index: 0;
   max-width: 570px;
   min-height: 380px;
+  flex: 50%;
 }
 .card:before {
   z-index: -1;
@@ -199,40 +196,31 @@ header {
   z-index: -2;
 }
 .card-title {
-  font-weight: 500;
   font-size: 24px;
   margin-top: 5px;
   margin-bottom: 21px;
-  line-height: 23px;
 }
 .card-description {
   max-width: 168px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
 }
 .card-price {
-  font-weight: 500;
   font-size: 24px;
-  line-height: 23px;
+
   margin-bottom: 8px;
   display: block;
 }
 .card-delivery {
   display: block;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
+
   margin-bottom: 25px;
 }
-.button {
+.button-card {
   border-radius: 50px;
   padding: 13px 52px;
   color: #5f5f61;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
+
   background-color: #fff;
+  text-decoration: none;
 }
 
 .card-sweet-basket {
@@ -242,3 +230,249 @@ header {
 .card-minimum-effort {
   padding-left: -25px;
 }
+/* promo with slides end */
+
+/* delivery week begin */
+.delivery-week {
+  padding: 100px 0px;
+}
+.delivery-week-title {
+  margin: 0 0 47px 0;
+  color: #000;
+
+  font-size: 32px;
+}
+.delivery-cards {
+  margin: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.delivery-card {
+  position: relative;
+  margin: 15px;
+  width: 275px;
+  overflow: hidden;
+  height: 182px;
+}
+.weekly-card-image {
+  border-radius: 18px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card-tag {
+  left: 10px;
+  top: 16px;
+  border-radius: 30px;
+  position: absolute;
+  padding: 5px 10px;
+
+  font-size: 20px;
+
+  color: #49494f;
+}
+.sports {
+  background-color: #d0fd89;
+}
+
+.vegetalbes {
+  background-color: #aebc41;
+  color: #fff;
+}
+.meat {
+  background-color: #b86b78;
+  color: #fff;
+}
+.birds {
+  background-color: #d68334;
+  color: #fff;
+}
+.fish {
+  background-color: #cd6255;
+  color: #fff;
+}
+.children {
+  background-color: #fffdbf;
+}
+.for-parents {
+  background-color: #f6fdc8;
+}
+.celebration {
+  background-color: #fef7fe;
+}
+
+/* end of week-delivery */
+
+/* section-grey  */
+.section-grey {
+  background: #f6f6f6;
+}
+.categories {
+  padding-top: 40px;
+  padding-bottom: 60px;
+}
+.section-title {
+  font-size: 32px;
+  color: #000000;
+  margin: 0 0 50px 0;
+}
+.tabs {
+  margin: 0 0 62px 0;
+  display: flex;
+}
+.tabs-item {
+  list-style: none;
+}
+.tabs-link {
+  margin: 0 58px 0 0;
+  text-decoration: none;
+  color: #49494f;
+  font-size: 20px;
+}
+.tabs-link.active {
+  color: #f37321;
+}
+.tabs-card-content {
+  padding: 22px;
+}
+.tabs-content {
+  display: flex;
+}
+.tabs-card {
+  margin-right: 37px;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  height: 100%;
+}
+.tabs-card:last-child {
+  margin-right: 0;
+}
+.tab-image {
+  border-radius: 20px;
+  width: 100%;
+}
+.tabs-title {
+  font-size: 20px;
+  color: #000;
+  margin: 21px 0 13px 0;
+}
+.tabs-description {
+  font-size: 14px;
+  color: #b9b9be;
+  max-width: 220px;
+  margin: 0 0 36px 0;
+}
+.tabs-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tabs-price {
+  font-size: 23px;
+  color: #4b4b51;
+  display: block;
+  margin: 0 0 5px 0;
+}
+.tabs-weight {
+  font-size: 17px;
+  line-height: 20px;
+  margin: 0;
+  color: #aaaab1;
+}
+.button-outline {
+  border-radius: 33px;
+  border: 2px solid #f37321;
+  background-color: transparent;
+  padding: 15px 25px;
+  color: #f37321;
+  cursor: pointer;
+}
+.button-center {
+  display: block;
+  margin: auto;
+  margin-top: 60px;
+  width: 315px;
+}
+
+/* tabs and cards end */
+
+/* odds start */
+.odds {
+  background-color: #fff;
+  padding: 100px;
+  margin: 0 0 100px 0;
+}
+.odds-title {
+  font-size: 32px;
+  color: #000;
+  margin: 0 0 52px 0;
+}
+.odds-wrapper {
+  display: flex;
+}
+.odds-card {
+  width: 270px;
+  display: flex;
+  margin-right: 37px;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #e9e9e9;
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+}
+.odds-image {
+  padding: 30px 105px;
+  cursor: default;
+}
+.odds-card-title {
+  color: #000;
+  margin: 0 0 13px 0;
+  padding: 5px 35px;
+}
+.odds-card-text {
+  color: #49494f;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 10px 22px 25px 22px;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* odds finish */
+/* footer start */
+
+.footer {
+  padding: 40px 0;
+  background-color: #f6f6f6;
+}
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+}
+.footer-logo {
+  margin-right: 50px;
+}
+.footer-links {
+}
+.footer-link {
+  text-decoration: none;
+  margin-right: 50px;
+  color: #000000;
+}
+.footer-link:hover {
+  text-decoration: underline;
+}
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.social-link {
+  margin-left: 20px;
+}
+/* footer finish */
