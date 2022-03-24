@@ -10,7 +10,7 @@ body {
 }
 .container {
   max-width: 1194px;
-  margin: auto;
+  margin: 0px auto;
 }
 header {
   display: flex;
@@ -19,8 +19,10 @@ header {
   padding: 10px 0px;
 }
 
+.logo {
+  margin: 0 76px 0 0;
+}
 .search-form {
-  margin: 0 0 0 76px;
   background: rgba(238, 238, 238, 0.71);
   border-radius: 10px;
   display: flex;
@@ -102,6 +104,9 @@ header {
   max-width: 400px;
   position: relative;
 }
+.swiper {
+  position: relative;
+}
 .slider-title {
   margin-top: 0;
   margin-bottom: 15px;
@@ -132,6 +137,14 @@ header {
   background: url(../img/summer.png) no-repeat;
   background-size: cover;
 }
+.slide-autumn {
+  background: url(../img/autumn.png) no-repeat;
+  background-size: cover;
+}
+.slide-vitamine {
+  background: url(../img/vitamine.png) no-repeat;
+  background-size: cover;
+}
 .slide:before {
   content: "";
   position: absolute;
@@ -146,6 +159,19 @@ header {
     rgba(0, 0, 0, 0.43) 40.45%,
     rgba(0, 0, 0, 0) 100%
   );
+}
+.slider-buttons {
+  position: absolute;
+  bottom: 39px;
+  right: 46px;
+  z-index: 15;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+.slider-button {
+  cursor: pointer;
 }
 
 /* slider end */
@@ -165,9 +191,10 @@ header {
   overflow: hidden;
   padding: 32px;
   z-index: 0;
-  max-width: 570px;
+  width: 570px;
   min-height: 380px;
   flex: 50%;
+  margin: 0 0 32px 0;
 }
 .card:before {
   z-index: -1;
@@ -238,6 +265,7 @@ header {
 }
 .delivery-week-title {
   margin: 0 0 47px 0;
+  line-height: 30px;
   color: #000;
 
   font-size: 32px;
@@ -308,8 +336,8 @@ header {
   background: #f6f6f6;
 }
 .categories {
-  padding-top: 40px;
-  padding-bottom: 60px;
+  padding: 46px 0;
+  padding-right: -20px;
 }
 .section-title {
   font-size: 32px;
@@ -340,15 +368,13 @@ header {
 }
 .tabs-card {
   margin-right: 37px;
+  margin-bottom: 37px;
   border-radius: 20px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   max-width: 270px;
   height: 100%;
-}
-.tabs-card:last-child {
-  margin-right: 0;
 }
 .tab-image {
   border-radius: 20px;
@@ -401,8 +427,8 @@ header {
 
 /* odds start */
 .odds {
+  padding: 100px 0 100px 0;
   background-color: #fff;
-  padding: 100px;
   margin: 0 0 100px 0;
 }
 .odds-title {
@@ -412,11 +438,13 @@ header {
 }
 .odds-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 .odds-card {
   width: 270px;
   display: flex;
   margin-right: 37px;
+  margin-bottom: 37px;
   align-items: center;
   text-align: center;
   flex-direction: column;
@@ -476,3 +504,83 @@ header {
   margin-left: 20px;
 }
 /* footer finish */
+
+@media (max-width: 1260px) {
+  .container {
+    max-width: 960px;
+  }
+  .search-form {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+  .tabs-content {
+    flex-wrap: wrap;
+  }
+  .tabs-card {
+    flex: 50%;
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 760px;
+  }
+  .slide {
+    padding: 70px;
+  }
+  .delivery-card {
+    width: calc(50% - 30px);
+  }
+  .odds-card {
+    width: calc(50% - 50px);
+  }
+  .footer-logo {
+    margin-right: 40px;
+  }
+  .search-form {
+    margin-left: -10px;
+  }
+}
+@media (max-width: 768px) {
+  .container {
+    max-width: 560px;
+  }
+  .header {
+    flex-wrap: wrap;
+  }
+  .search-form {
+    order: 5;
+    margin: 15px 0;
+  }
+  .promo {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
+  .tabs-card {
+    max-width: 100%;
+    width: 100%;
+  }
+  .tabs-description {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .delivery-card {
+    width: 100%;
+  }
+  .odds-card {
+    width: 100%;
+    margin-right: 0px;
+  }
+  .footer-link {
+    font-size: 15px;
+  }
+  .slide {
+    padding: 60px;
+  }
+}
